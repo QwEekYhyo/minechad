@@ -1,4 +1,4 @@
-package com.github.minechad;
+package com.qweekyhyo.minechad;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
