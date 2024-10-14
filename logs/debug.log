@@ -1,3 +1,0 @@
-[14Oct2024 15:15:15.022] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[14Oct2024 15:15:15.025] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[14Oct2024 15:15:15.025] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
