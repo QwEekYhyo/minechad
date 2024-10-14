@@ -1,9 +1,11 @@
 package com.qweekyhyo.minechad;
 
+import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -21,21 +23,25 @@ import java.util.stream.Collectors;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("minechad")
 public class MineChad {
+    public static final String MODID = "minechad";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public MineChad() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        modEventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
+        modEventBus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        modEventBus.addListener(this::processIMC);
         // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        modEventBus.addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -51,7 +57,7 @@ public class MineChad {
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> {
+        InterModComms.sendTo(MineChad.MODID, "helloworld", () -> {
             LOGGER.info("Hello world from the MDK");
             return "Hello world";
         });
