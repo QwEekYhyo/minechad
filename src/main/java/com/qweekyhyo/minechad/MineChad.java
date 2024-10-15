@@ -1,8 +1,11 @@
 package com.qweekyhyo.minechad;
 
+import com.qweekyhyo.minechad.block.ModBlocks;
 import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,6 +45,7 @@ public class MineChad {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -53,6 +57,7 @@ public class MineChad {
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        RenderTypeLookup.setRenderLayer(ModBlocks.COTTON_CROP_BLOCK.get(), RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
