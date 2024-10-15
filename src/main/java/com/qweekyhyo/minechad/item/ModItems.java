@@ -13,7 +13,11 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MineChad.MODID);
 
     public static final RegistryObject<Item> WHIP = ITEMS.register("whip",
-            () -> new Whip(new Item.Properties().durability(250)));
+            () -> new Whip(new Item.Properties()
+                    .tab(ModItemGroup.MINECHAD_GROUP)
+                    .durability(250)
+            )
+    );
 
 
     public static void register(IEventBus eventBus) {
