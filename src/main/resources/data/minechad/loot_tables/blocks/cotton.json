@@ -14,6 +14,11 @@
             }
           ]
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
       ]
     },
     {
@@ -40,6 +45,9 @@
           "properties": {
             "age": 5
           }
+        },
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }
