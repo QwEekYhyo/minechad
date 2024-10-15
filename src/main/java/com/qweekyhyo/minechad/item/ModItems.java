@@ -29,6 +29,13 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> COTTON = ITEMS.register(
+            "cotton",
+            () -> new Item(new Item.Properties()
+                    .tab(ModItemGroup.MINECHAD_GROUP)
+            )
+    );
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
