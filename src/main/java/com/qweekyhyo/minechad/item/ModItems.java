@@ -3,7 +3,7 @@ package com.qweekyhyo.minechad.item;
 import com.qweekyhyo.minechad.MineChad;
 import com.qweekyhyo.minechad.block.ModBlocks;
 import com.qweekyhyo.minechad.item.tool.Whip;
-import net.minecraft.item.BlockItem;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -23,7 +23,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> COTTON_SEEDS = ITEMS.register(
             "cotton_seeds",
-            () -> new BlockItem(
+            () -> new BlockNamedItem(
                     ModBlocks.COTTON_CROP_BLOCK.get(),
                     new Item.Properties().tab(ModItemGroup.MINECHAD_GROUP)
             )

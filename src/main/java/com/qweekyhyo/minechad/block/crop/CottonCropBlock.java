@@ -1,12 +1,12 @@
 package com.qweekyhyo.minechad.block.crop;
 
+import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.IItemProvider;
 
 import javax.annotation.Nonnull;
 
@@ -37,5 +37,11 @@ public class CottonCropBlock extends CropsBlock {
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(AGE);
+    }
+
+    @Override
+    @Nonnull
+    protected IItemProvider getBaseSeedId() {
+        return ModItems.COTTON_SEEDS.get();
     }
 }

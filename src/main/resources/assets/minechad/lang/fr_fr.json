@@ -1,4 +1,6 @@
 {
+  "itemGroup.MinechadModTab": "Minechad",
   "item.minechad.whip": "Fouet",
-  "itemGroup.MinechadModTab": "Minechad"
+  "item.minechad.cotton_seeds": "Graines de Coton",
+  "block.minechad.cotton": "Plant de Coton"
 }
