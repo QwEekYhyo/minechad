@@ -1,7 +1,6 @@
 package com.qweekyhyo.minechad.entity;
 
 import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -15,6 +14,7 @@ import net.minecraft.world.server.ServerWorld;
 public class SerfEntity extends AgeableEntity {
     public SerfEntity(EntityType<? extends AgeableEntity> entityType, World worldIn) {
         super(entityType, worldIn);
+        this.xpReward = 3;
     }
 
     public static AttributeModifierMap.MutableAttribute createAttributes() {
