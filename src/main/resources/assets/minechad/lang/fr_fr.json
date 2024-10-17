@@ -3,5 +3,7 @@
   "item.minechad.whip": "Fouet",
   "item.minechad.cotton_seeds": "Graines de Coton",
   "item.minechad.cotton": "Coton",
-  "block.minechad.cotton": "Plant de Coton"
+  "item.minechad.serf_spawn_egg": "Oeuf d'apparition de bamboula",
+  "block.minechad.cotton": "Plant de Coton",
+  "entity.minechad.serf": "Bamboula"
 }

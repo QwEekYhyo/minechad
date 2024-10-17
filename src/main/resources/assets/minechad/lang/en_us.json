@@ -3,5 +3,7 @@
   "item.minechad.whip": "Whip",
   "item.minechad.cotton_seeds": "Cotton Seeds",
   "item.minechad.cotton": "Cotton",
-  "block.minechad.cotton": "Cotton Crops"
+  "item.minechad.serf_spawn_egg": "Coon Spawn Egg",
+  "block.minechad.cotton": "Cotton Crops",
+  "entity.minechad.serf": "Coon"
 }
