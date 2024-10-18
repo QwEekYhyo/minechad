@@ -4,6 +4,7 @@ import com.qweekyhyo.minechad.block.ModBlocks;
 import com.qweekyhyo.minechad.client.renderer.entity.SerfRenderer;
 import com.qweekyhyo.minechad.entity.ModEntities;
 import com.qweekyhyo.minechad.entity.SerfEntity;
+import com.qweekyhyo.minechad.init.KeybindsInit;
 import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -61,6 +62,7 @@ public class MineChad {
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
         RenderTypeLookup.setRenderLayer(ModBlocks.COTTON_CROP_BLOCK.get(), RenderType.cutout());
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SERF.get(), SerfRenderer::new);
+        KeybindsInit.registerAllKeys();
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
