@@ -2,13 +2,17 @@ package com.qweekyhyo.minechad;
 
 import com.qweekyhyo.minechad.block.ModBlocks;
 import com.qweekyhyo.minechad.client.renderer.entity.SerfRenderer;
+import com.qweekyhyo.minechad.client.renderer.entity.WavingPlayerRenderer;
 import com.qweekyhyo.minechad.entity.ModEntities;
 import com.qweekyhyo.minechad.entity.SerfEntity;
 import com.qweekyhyo.minechad.init.KeybindsInit;
 import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -63,6 +67,10 @@ public class MineChad {
         RenderTypeLookup.setRenderLayer(ModBlocks.COTTON_CROP_BLOCK.get(), RenderType.cutout());
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SERF.get(), SerfRenderer::new);
         KeybindsInit.registerAllKeys();
+        // Register custom player renderer for waving emote
+        EntityRendererManager entityRendererManager = Minecraft.getInstance().getEntityRenderDispatcher();
+        entityRendererManager.getSkinMap().values()
+                .forEach(renderer -> renderer.addLayer(new WavingPlayerRenderer(renderer)));
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

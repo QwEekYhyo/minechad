@@ -1,7 +1,6 @@
 package com.qweekyhyo.minechad.client.event;
 
 import com.qweekyhyo.minechad.MineChad;
-import com.qweekyhyo.minechad.emote.EmoteHandler;
 import com.qweekyhyo.minechad.init.KeybindsInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,9 +14,7 @@ public class ForgeClientEvent {
     @SubscribeEvent
     public static void clientTick(TickEvent.ClientTickEvent event) {
         PlayerEntity player = Minecraft.getInstance().player;
-        if (player != null && KeybindsInit.WAVE_EMOTE_KEY.isDown()) {
-            EmoteHandler.playWavingEmote(player);
-            EmoteHandler.stopEmote(player);
-        }
+        if (player == null) return;
+        player.getPersistentData().putBoolean("is_waving", KeybindsInit.WAVE_EMOTE_KEY.isDown());
     }
 }
