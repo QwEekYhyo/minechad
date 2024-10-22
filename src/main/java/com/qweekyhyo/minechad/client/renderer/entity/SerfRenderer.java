@@ -2,7 +2,7 @@ package com.qweekyhyo.minechad.client.renderer.entity;
 
 import com.qweekyhyo.minechad.MineChad;
 import com.qweekyhyo.minechad.client.renderer.entity.model.SerfModel;
-import com.qweekyhyo.minechad.entity.SerfEntity;
+import com.qweekyhyo.minechad.entity.serf.SerfEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

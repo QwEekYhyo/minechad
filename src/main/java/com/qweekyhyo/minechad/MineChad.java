@@ -3,7 +3,7 @@ package com.qweekyhyo.minechad;
 import com.qweekyhyo.minechad.block.ModBlocks;
 import com.qweekyhyo.minechad.client.renderer.entity.SerfRenderer;
 import com.qweekyhyo.minechad.entity.ModEntities;
-import com.qweekyhyo.minechad.entity.SerfEntity;
+import com.qweekyhyo.minechad.entity.serf.SerfEntity;
 import com.qweekyhyo.minechad.item.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;

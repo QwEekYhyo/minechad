@@ -2,7 +2,7 @@ package com.qweekyhyo.minechad.client.renderer.entity.model;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import com.qweekyhyo.minechad.entity.SerfEntity;
+import com.qweekyhyo.minechad.entity.serf.SerfEntity;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 

@@ -1,6 +1,7 @@
 package com.qweekyhyo.minechad.entity;
 
 import com.qweekyhyo.minechad.MineChad;
+import com.qweekyhyo.minechad.entity.serf.SerfEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
